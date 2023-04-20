@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Registro de Persona</title>
+</head>
+<body>
+	<h1>Ingresar datos</h1>
+	<form th:object="${persona}" th:action="@{/listaPersonas}" method="post">
+		<label for="fnombre">Nombre:</label><br>
+		<input type="text" id="fnombre" th:field="*{nombre}"><br>
+		<label for="fapellido">Apellido:</label><br>
+		<input type="text" id="fapellido" th:field="*{apellido}"><br>
+		<label for="ffechanacimiento">Fecha Nacimiento:</label><br>
+		<input type="date" id="ffechanacimiento" th:field="*{fechaNacimiento}"><br><br>
+		<input type="submit" value="Enviar">
+	</form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Proceso String</title>
+</head>
+<body>
+	<h1>Verificacion de strings</h1>
+	<form th:object="${procesoString}" th:action="@{/guardarProcesoString}" method="post">
+		<label for="ffcadena">Cadena: </label><br>
+		<input type="text" id="ffcadena" th:field="*{cadena}"><br><br>
+		<input type="submit" value="Enviar">
+	</form>
+</body>
+</html>
